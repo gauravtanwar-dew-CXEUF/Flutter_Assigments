@@ -23,15 +23,18 @@ class Homepage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
-                    Text('Hi Ehi',
+                    Text(
+                      'Hi Ehi',
                       style: TextStyle(color: Colors.grey),
                     ),
                     NotificationWidgets(),
                   ],
                 ),
                 Text('1,234.00',
-                  style: TextStyle(color: Colors.black,fontSize: 30,fontWeight: FontWeight.bold)
-                ),
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold)),
                 const SizedBox(height: 15),
                 Row(
                   children: const [
@@ -49,25 +52,23 @@ class Homepage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 48),
-                const Text('Here are something you can do',
+                const Text(
+                  'Here are something you can do',
                   style: TextStyle(color: Colors.grey),
                 ),
                 const SizedBox(height: 18),
-
                 Expanded(
                   child: GridView.builder(
                       gridDelegate:
-                      const SliverGridDelegateWithFixedCrossAxisCount(
+                          const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                       ),
                       itemCount: gridItemData.length,
                       itemBuilder: (BuildContext context, int index) {
                         final menuItem = gridItemData[index];
-                        return MenuItemWidgets(
-                            menuItem: menuItem);
+                        return MenuItemWidgets(menuItem: menuItem);
                       }),
                 ),
-
                 const Text(
                   'Your Favourite people',
                   style: TextStyle(color: Colors.grey),
@@ -83,18 +84,18 @@ class Homepage extends StatelessWidget {
                       width: 75,
                       decoration: const BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Colors.grey, // replace with your desired background color
+                        color: Colors
+                            .grey, // replace with your desired background color
                       ),
-
                       child: const Icon(
                         Icons.add, // replace with your desired icon
                         color: Colors.black54, // repla
                         size: 40, // ce with your desired icon color
                       ),
-
                     ),
-                    const SizedBox(width: 8,),
-
+                    const SizedBox(
+                      width: 8,
+                    ),
                     Expanded(
                       child: SizedBox(
                         height: 92, // set fixed height
@@ -103,8 +104,7 @@ class Homepage extends StatelessWidget {
                           itemCount: dummyPeopleData.length,
                           itemBuilder: (context, index) {
                             final favPeople = dummyPeopleData[index];
-                            return FavPeopleWidget(
-                                favPeople: favPeople);
+                            return FavPeopleWidget(favPeople: favPeople);
                           },
                         ),
                       ),
@@ -113,7 +113,7 @@ class Homepage extends StatelessWidget {
                 ),
                 const SizedBox(
                   height: 30,
-                )
+                ),
               ],
             ),
           ),
