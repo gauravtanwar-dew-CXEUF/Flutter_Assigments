@@ -1,4 +1,5 @@
 import 'package:assigments/assigment_2_homepage/homepage.dart';
+import 'package:assigments/assigmnet_1_splash_login/ui_screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,7 +28,9 @@ class MyApp extends StatelessWidget {
       ),
      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       debugShowCheckedModeBanner: false,
-      home: Homepage(),
+     // home: Homepage(),
+      home: SplashScreen(),
+    //  initialRoute: splashRoute,
     );
   }
 }
