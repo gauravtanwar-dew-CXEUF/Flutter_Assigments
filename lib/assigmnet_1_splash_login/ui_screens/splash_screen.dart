@@ -1,4 +1,5 @@
 import 'package:assigments/assigment_2_homepage/homepage.dart';
+import 'package:assigments/assigment_3_travel_booking/travel_home_page.dart';
 import 'package:assigments/assigmnet_1_splash_login/widgets/background_page.dart';
 import 'package:flutter/material.dart';
 
@@ -24,12 +25,12 @@ class _SplashScreenState extends State<SplashScreen> {
 
   _navigatetoHomepage() async{
     await Future.delayed(Duration(milliseconds: 3000),(){});
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => Homepage()));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => TravelHomePage()));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: BackgroundPage(
         childWidget: Text('Mr Bookworm!',style: TextStyle(color: Colors.white,fontSize: 35,fontWeight: FontWeight.bold),),
       ),
